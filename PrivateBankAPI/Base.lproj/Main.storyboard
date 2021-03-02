@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YTL-HD-lHu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="PrivateBankAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-gK-l3N">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToGreenVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNa-71-mzD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PJU-gK-l3N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1qK-c4-8As"/>
+                            <constraint firstItem="PJU-gK-l3N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vI0-7r-Weo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qOe-2h-9jq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="113.83928571428571"/>
+        </scene>
+        <!--Green View Controller-->
+        <scene sceneID="XhO-e1-PYG">
+            <objects>
+                <viewController storyboardIdentifier="GreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A8A-EZ-fHe" customClass="GreenViewController" customModule="PrivateBankAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bk-D3-OpF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="N9g-be-9cf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VqM-zx-Fxk">
+                                <rect key="frame" x="0.0" y="270" width="414" height="592"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellIdentifier" id="SwC-QF-cMW" customClass="CustomTableViewCell" customModule="PrivateBankAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SwC-QF-cMW" id="ywR-kz-crc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-Mo-rC0">
+                                                    <rect key="frame" x="104" y="16" width="206" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7z-ue-uLP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saleRateNB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyb-J5-LGj">
+                                                            <rect key="frame" x="117.5" y="0.0" width="88.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kHT-Mo-rC0" firstAttribute="centerX" secondItem="ywR-kz-crc" secondAttribute="centerX" id="cKM-aZ-yYR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kHT-Mo-rC0" secondAttribute="bottom" constant="5" id="r9x-HG-H8Q"/>
+                                                <constraint firstItem="kHT-Mo-rC0" firstAttribute="top" secondItem="ywR-kz-crc" secondAttribute="topMargin" constant="5" id="srP-0m-lzg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currencyLabel" destination="B7z-ue-uLP" id="xoN-vE-sVd"/>
+                                            <outlet property="safeRateNBLabel" destination="uyb-J5-LGj" id="uMw-6d-76S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nBv-5r-yZ4"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="nBv-5r-yZ4" firstAttribute="trailing" secondItem="VqM-zx-Fxk" secondAttribute="trailing" id="DbA-3G-zxs"/>
+                            <constraint firstItem="N9g-be-9cf" firstAttribute="trailing" secondItem="nBv-5r-yZ4" secondAttribute="trailing" id="FtU-fR-Thb"/>
+                            <constraint firstItem="nBv-5r-yZ4" firstAttribute="bottom" secondItem="VqM-zx-Fxk" secondAttribute="bottom" id="OUy-uk-TMk"/>
+                            <constraint firstItem="N9g-be-9cf" firstAttribute="top" secondItem="nBv-5r-yZ4" secondAttribute="top" id="aB8-GQ-Fel"/>
+                            <constraint firstItem="VqM-zx-Fxk" firstAttribute="top" secondItem="N9g-be-9cf" secondAttribute="bottom" constant="10" id="dWC-w8-FbN"/>
+                            <constraint firstItem="N9g-be-9cf" firstAttribute="leading" secondItem="nBv-5r-yZ4" secondAttribute="leading" id="vmO-zM-XC8"/>
+                            <constraint firstItem="VqM-zx-Fxk" firstAttribute="leading" secondItem="nBv-5r-yZ4" secondAttribute="leading" id="xaF-1S-HOE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectDateInPicker" destination="N9g-be-9cf" id="5YC-zN-eRk"/>
+                        <outlet property="tableView" destination="VqM-zx-Fxk" id="ZIZ-Gn-FgN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQV-eN-A8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="649"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Sb-xe-4r7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YTL-HD-lHu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9b8-Bh-XUI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QYo-w0-3pM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yj-OU-bhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
